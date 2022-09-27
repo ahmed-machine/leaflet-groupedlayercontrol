@@ -297,7 +297,8 @@ L.Control.GroupedLayers = L.Control.extend({
 
                 if (this.options.groupsCollapsible){
                     groupContainer.classList.add("group-collapsible");
-                    groupContainer.classList.add("collapsed");
+                    if (obj.group.id != 1){
+                        groupContainer.classList.add("collapsed");}
 
                     var groupMin = document.createElement('span');
                     groupMin.className = 'leaflet-control-layers-group-collapse '+this.options.groupsExpandedClass;
